@@ -1,0 +1,12 @@
+# app/Entities/PetType.dcm.yml
+PetStore\Domain\PetType\PetType:
+  type: entity
+  table: pettypes
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      type: string

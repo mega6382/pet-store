@@ -1,0 +1,18 @@
+# app/Entities/Showroom.dcm.yml
+PetStore\Domain\Showroom\Showroom:
+  type: entity
+  table: showrooms
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    description:
+      type: string
+    dogsLimit:
+      type: integer
+    catsLimit:
+      type: integer
+    birdsLimit:
+      type: integer

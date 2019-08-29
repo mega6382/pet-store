@@ -1,0 +1,20 @@
+# app/Entities/IdentityChip.dcm.yml
+PetStore\Domain\IdentityChip\IdentityChip:
+  type: entity
+  table: identitychips
+  manyToOne:
+    identityChipType:
+      targetEntity: PetStore\Domain\IdentityChipType\IdentityChipType
+      joinColumn:
+        name: identityChipTypeId
+        referencedColumnName: id
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    identityChipTypeId:
+      type: integer
+    dateAdded:
+      type: date

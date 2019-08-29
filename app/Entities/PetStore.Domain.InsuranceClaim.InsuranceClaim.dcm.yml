@@ -1,0 +1,18 @@
+# app/Entities/InsuranceClaim.dcm.yml
+PetStore\Domain\InsuranceClaim\InsuranceClaim:
+  type: entity
+  table: insuranceclaim
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    refunded:
+      type: boolean
+    refundedAmount:
+      type: integer
+    closed:
+      type: boolean
+    dateCreated:
+      type: date

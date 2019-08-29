@@ -1,0 +1,16 @@
+# app/Entities/Customer.dcm.yml
+PetStore\Domain\Customer\Customer:
+  type: entity
+  table: customers
+  oneToMany:
+    transactions:
+      targetEntity: PetStore\Domain\Transaction\Transaction
+      mappedBy: customer
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      type: string

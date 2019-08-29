@@ -1,0 +1,14 @@
+# app/Entities/Timing.dcm.yml
+PetStore\Domain\Timing\Timing:
+  type: entity
+  table: timings
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    openFromDay:
+      type: string
+    openToDay:
+      type: string

@@ -1,0 +1,55 @@
+# app/Entities/TransactionController.dcm.yml
+PetStore\Domain\Transaction\Transaction:
+  type: entity
+  table: transactions
+  manyToOne:
+    customer:
+      targetEntity: PetStore\Domain\Customer\Customer
+      inversedBy: transactions
+      joinColumn:
+        name: customerId
+        referencedColumnName: id
+    insuranceType:
+      targetEntity: PetStore\Domain\InsuranceType\InsuranceType
+      joinColumn:
+        name: insuranceTypeId
+        referencedColumnName: id
+  oneToOne:
+    pet:
+      targetEntity: PetStore\Domain\Pet\Pet
+      joinColumn:
+        name: petId
+        referencedColumnName: id
+    insuranceClaim:
+      targetEntity: PetStore\Domain\InsuranceClaim\InsuranceClaim
+      joinColumn:
+        name: insuranceClaimId
+        referencedColumnName: id
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    petId:
+      type: integer
+    customerId:
+      type: integer
+    insuranceTypeId:
+      nullable: TRUE
+      type: integer
+    insuranceClaimId:
+      nullable: TRUE
+      type: integer
+    petCost:
+      type: integer
+    insuranceCost:
+      type: integer
+    amountPaidUpfront:
+      type: integer
+    totalAmountPaid:
+      type: integer
+    petDelivered:
+      type: boolean
+    transactionDate:
+      type: date

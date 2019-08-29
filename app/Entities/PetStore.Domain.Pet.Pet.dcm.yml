@@ -1,0 +1,36 @@
+# app/Entities/Pet.dcm.yml
+PetStore\Domain\Pet\Pet:
+  type: entity
+  table: pets
+  manyToOne:
+    petType:
+      targetEntity: PetStore\Domain\PetType\PetType
+      joinColumn:
+        name: petTypeId
+        referencedColumnName: id
+    identityChip:
+      targetEntity: PetStore\Domain\IdentityChip\IdentityChip
+      joinColumn:
+        name: identityChipId
+        referencedColumnName: id
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      type: string
+    dateOfBirth:
+      type: date
+    price:
+      type: integer
+    petTypeId:
+      type: integer
+    identityChipId:
+      nullable: TRUE
+      type: integer
+    isSold:
+      options:
+        default: false
+      type: boolean

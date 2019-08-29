@@ -1,0 +1,16 @@
+# app/Entities/PetStore.Domain.Backyard.Backyard.dcm.yml
+PetStore\Domain\Backyard\Backyard:
+  type: entity
+  table: backyards
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    dogsLimit:
+      type: integer
+    catsLimit:
+      type: integer
+    birdsLimit:
+      type: integer

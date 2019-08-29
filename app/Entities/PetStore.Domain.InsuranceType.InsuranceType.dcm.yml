@@ -1,0 +1,16 @@
+# app/Entities/InsuranceType.dcm.yml
+PetStore\Domain\InsuranceType\InsuranceType:
+  type: entity
+  table: insurancetype
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    duration:
+      type: integer
+    cost:
+      type: integer
+    cashback:
+      type: integer

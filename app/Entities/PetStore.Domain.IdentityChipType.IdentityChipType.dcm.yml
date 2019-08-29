@@ -1,0 +1,14 @@
+# app/Entities/IdentityChipType.dcm.yml
+PetStore\Domain\IdentityChipType\IdentityChipType:
+  type: entity
+  table: identitychiptypes
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    requiredAge:
+      type: integer
+    cost:
+      type: integer
